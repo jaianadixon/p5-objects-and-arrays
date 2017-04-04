@@ -10,10 +10,10 @@ function setup(){
 }
 
 function draw(){
-    background(0);
+    background(137, 137, 133);
     for(var i =0; i<allMyBubbles.length; i++){
     allMyBubbles[i].display();
-     allMyBubbles[i].move();
+    allMyBubbles[i].move();
     }
 }
 
@@ -23,6 +23,8 @@ function Bubble(x,y){
     fill(25,21,250,125);
     this.display=function(){
         stroke(255);
+        rect(this.x,this.y,sizeOfBubble,sizeOfBubble);
+        stroke(255,0,0)
         rect(this.x,this.y,sizeOfBubble,sizeOfBubble);
     }
     this.move = function(){
